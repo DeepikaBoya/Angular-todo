@@ -1,0 +1,271 @@
+
+.todo-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+  }
+  
+  h2 {
+    text-align: center;
+    font-size: 24px;
+    color: #333;
+  }
+  
+  .add-task {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .add-task input {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 10px;
+  }
+  
+  .add-task button {
+    padding: 10px 15px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .add-task button:hover {
+    background-color: #218838;
+  }
+  
+  .task-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .task-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .task-list li.completed span {
+    text-decoration: line-through;
+    color: #888;
+  }
+  
+  .task-list .delete-btn {
+    padding: 5px 10px;
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .task-list .delete-btn:hover {
+    background-color: #c82333;
+  }
+  .todo-container {
+    max-width: 400px;
+    margin: auto;
+    font-family: Arial, sans-serif;
+  }
+  
+  .add-task {
+    display: flex;
+    margin-bottom: 10px;
+  }
+  
+  .add-task input {
+    flex: 1;
+    margin-right: 10px;
+    padding: 5px;
+  }
+  
+  .task-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .task-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+  }
+  
+  .task-list span.completed {
+    text-decoration: line-through;
+    color: gray;
+  }
+  
+  .task-list input[type='text'] {
+    flex: 1;
+    margin-right: 10px;
+  }
+  
+  button {
+    padding: 5px 10px;
+    margin-left: 5px;
+    cursor: pointer;
+    color:blue
+  }
+  .edit-btn
+  {
+    color:blue
+  }
+
+  .todo-container {
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+  }
+  
+  .add-task {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .add-task input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  
+  .add-btn {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  .add-btn:hover {
+    background-color: #45a049;
+  }
+  
+  .task-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .task-content {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .task-details p {
+    margin: 0;
+    font-size: 14px;
+  }
+  
+  .task-actions {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .edit-btn,
+  .delete-btn {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .edit-btn {
+    background-color: #ff9800;
+    color: white;
+  }
+  
+  .edit-btn:hover {
+    background-color: #e68900;
+  }
+  
+  
+  
+  .delete-btn:hover {
+    background-color: #d32f2f;
+  }
+  .task-item.completed .task-details p {
+    text-decoration: line-through;
+    color: gray;
+  }
+
+  .task-content {
+    opacity: 0.6;
+  }
+  
+  .task-list li.completed .edit-btn {
+    cursor: not-allowed;
+    background-color: #ccc;
+  }
+  
+  .task-list li .task-details p {
+    margin: 0;
+  }
+  
+  .task-list li .task-details p.completed {
+    text-decoration: line-through;
+    color: gray;
+  }
+ 
+  .save-btn {
+    background-color:green; 
+    color: white;
+    border: none; 
+    box-shadow: none; 
+    padding: 5px 10px;
+    border-radius: 5px; 
+    cursor: pointer;
+    font-weight: bold; 
+  }
+  .cancel-btn {
+    margin-top:10px;
+    background-color:blue; 
+    color: white;
+    border: none; 
+    box-shadow: none; 
+    padding: 5px 10px;
+    border-radius: 5px; 
+    cursor: pointer;
+    font-weight: bold; 
+  }
+  .error-message {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+  }
+  
+  
+  
+  

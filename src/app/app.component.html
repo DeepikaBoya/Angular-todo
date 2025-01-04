@@ -1,0 +1,64 @@
+<div class="todo-container">
+    <div class="add-task">
+      <form #todoForm="ngForm" (ngSubmit)="addTask()">
+        <!-- Task input with required validation -->
+        <input
+          type="text"
+          [(ngModel)]="task"
+          name="task"
+          placeholder="Enter Task"
+          required
+          #taskModel="ngModel"
+        />
+        
+        <!-- Description input (optional) -->
+        <input
+          type="text"
+          [(ngModel)]="description"
+          name="description"
+          placeholder="Enter Description"
+        />
+  
+        <!-- Submit button, disabled when form is invalid -->
+        <button type="submit" class="add-btn" [disabled]="!todoForm.form.valid">
+          Add
+        </button>
+  
+        <!-- Error message for task field if required -->
+        <div *ngIf="taskModel.invalid && taskModel.touched" class="error-message">
+          Task is required.
+        </div>
+      </form>
+    </div>
+  
+    <ul class="task-list">
+      <li *ngFor="let todoItem of todoList" class="task-item" [class.completed]="todoItem.completed">
+        <div class="task-content">
+          <input
+            type="checkbox"
+            [checked]="todoItem.completed"
+            [disabled]="todoItem.isEditing"
+            (change)="toggleCompleted(todoItem.id)"
+          />
+          <div class="task-details">
+            <div *ngIf="todoItem.isEditing; else viewMode">
+              <input type="text" [(ngModel)]="todoItem.task" placeholder="Edit Task" />
+              <input type="text" [(ngModel)]="todoItem.description" placeholder="Edit Description" />
+              <button (click)="saveEdit(todoItem)" class="save-btn">Save</button>
+              <button (click)="todoItem.isEditing = false" class="cancel-btn">Cancel</button>
+            </div>
+  
+            <ng-template #viewMode>
+              <p><strong>Task:</strong> {{ todoItem.task }}</p>
+              <p *ngIf="todoItem.description"><strong>Description:</strong> {{ todoItem.description }}</p>
+            </ng-template>
+          </div>
+        </div>
+        <div class="task-actions">
+          <button class="edit-btn" [disabled]="todoItem.completed" (click)="editTask(todoItem)">Edit</button>
+          <button class="delete-btn" (click)="deleteTask(todoItem.id)">Delete</button>
+        </div>
+      </li>
+    </ul>
+  </div>
+  
