@@ -33,15 +33,13 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 About project:
 
 
-this project having add functinality,edit functinality, delete, and edit functionalities
+this project having add functionality,edit functionality, delete, and edit functionalities
 and also provided validation to task field. and also below validations
-
-
 when task is completed, edit button is disabled , allowing users to delete completed task.
 when editing task, disabled the task completing check box. allowing users to edit the task
 implemented save and cancel button for editing task
 
-i used localstorage dor data persistence
-on page load, the saved tasks displas on screen
+I used localstorage for data persistence.
+on page load, the saved tasks displays on screen
 
 
